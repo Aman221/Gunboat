@@ -17,6 +17,9 @@ public class Gunboat {
         double tanTheta = (-b + Math.sqrt(b*b - 4*a*c))/(2*a);
         double angle = Math.atan(tanTheta)*(180/Math.PI);
 
-        System.out.println("The shell was fired at an angle of " + angle + " degrees!");
+        if ((b*b-4*a*c) < 0)
+            System.out.println("The enemy is too far or your shell is too slow! Never fear, bide your time, shoot faster and try again!");
+        else
+            System.out.println("The shell was fired at an angle of " + angle + " degrees!");
     }
 }
